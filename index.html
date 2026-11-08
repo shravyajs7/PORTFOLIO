@@ -1,480 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shravya Shetty — Software Engineer</title>
-<meta name="description" content="Portfolio of Shravya Shetty — B.Tech CSE student, Software Engineer & Full Stack Developer.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Portfolio of Shravya Shetty — B.Tech CSE student, Full Stack Developer and Cultural Secretary at Presidency University.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#fbf7ff;--bg2:#f1eafc;--surface:rgba(255,255,255,.75);--text:#1a1526;--muted:#5e5873;--a:#7c3aed;--b:#ec4899;--c:#06b6d4;--line:rgba(124,58,237,.16);--shadow:0 10px 30px rgba(124,58,237,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0a17;--bg2:#161126;--surface:rgba(30,24,50,.7);--text:#f3effc;--muted:#a9a2bf;--a:#a78bfa;--b:#f472b6;--c:#22d3ee;--line:rgba(167,139,250,.2);--shadow:0 10px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0d0a17;--bg2:#161126;--surface:rgba(30,24,50,.7);--text:#f3effc;--muted:#a9a2bf;--a:#a78bfa;--b:#f472b6;--c:#22d3ee;--line:rgba(167,139,250,.2);--shadow:0 10px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.logo{font-family:"Space Grotesk",Inter,system-ui,sans-serif}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.35;z-index:-1;pointer-events:none}
+.b1{width:420px;height:420px;background:var(--a);top:-120px;left:-100px}
+.b2{width:380px;height:380px;background:var(--b);top:30%;right:-140px}
+.b3{width:340px;height:340px;background:var(--c);bottom:-120px;left:20%}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--surface);border-bottom:1px solid var(--line)}
+nav{max-width:1080px;margin:auto;padding:12px 22px;display:flex;gap:20px;align-items:center;overflow-x:auto;white-space:nowrap}
+nav::-webkit-scrollbar{display:none}
+.logo{font-weight:700;font-size:20px;margin-right:auto}
+nav a:not(.logo):not(.cv){font-size:14px;color:var(--muted);font-weight:500;transition:color .2s}
+nav a:hover{color:var(--a)}
+.cv{font-size:13px;font-weight:600;padding:7px 16px;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+main{max-width:1080px;margin:auto;padding:0 22px}
+section{padding:84px 0 0}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--b)}
+h2{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:8px 0 30px;font-weight:700}
+h3{margin:0 0 6px;font-size:20px}
+.hero{padding-top:70px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+h1{font-size:clamp(40px,8vw,74px);line-height:1.04;margin:18px 0 10px;font-weight:700;letter-spacing:-.02em}
+.role{font-family:"Space Grotesk",sans-serif;font-size:clamp(18px,3vw,26px);font-weight:500;min-height:1.5em}
+.role span{border-right:2px solid var(--a);padding-right:4px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{border-color:transparent}}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}
+.btn{padding:13px 26px;border-radius:12px;font-weight:600;font-size:15px;border:1.5px solid var(--a);transition:transform .2s,box-shadow .2s;display:inline-block}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));border-color:transparent;color:#fff}
+.btn:not(.p){color:var(--a)}
+.avatar{justify-self:center;width:min(300px,70vw);aspect-ratio:1;border-radius:36% 64% 58% 42%/45% 40% 60% 55%;background:linear-gradient(135deg,var(--a),var(--b),var(--c));display:grid;place-items:center;font:700 96px "Space Grotesk",sans-serif;color:#fff;box-shadow:0 20px 60px rgba(124,58,237,.35);animation:morph 9s ease-in-out infinite}
+@keyframes morph{50%{border-radius:58% 42% 40% 60%/55% 60% 40% 45%;transform:rotate(4deg)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:56px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font:700 36px "Space Grotesk",sans-serif}
+.stat span{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(8px);transition:transform .25s,border-color .25s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:var(--a)}
+.card p,.card li{color:var(--muted);font-size:15px}
+.card ul{padding-left:18px;margin:10px 0 0}.card li{margin-bottom:4px}
+.card.hl::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;border-radius:20px 20px 0 0;background:linear-gradient(90deg,var(--a),var(--b),var(--c))}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:21px;margin-bottom:14px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff}
+.kicker{font-size:12px;color:var(--b);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--bg2);border:1px solid var(--line);color:var(--a);font-size:13px;padding:5px 12px;border-radius:99px;font-weight:500;transition:all .2s}
+.chip:hover{background:var(--a);color:#fff}
+.link{color:var(--a);font-weight:600;font-size:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:26px}
+.facts div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--muted);font-size:13px}
+.facts b{display:block;color:var(--text);font-size:15px}
+.tl{position:relative;padding-left:30px;display:grid;gap:26px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--b),var(--c))}
+.tl>div{position:relative}
+.tl>div::before{content:"";position:absolute;left:-30px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--b)}
+.tl small{color:var(--a);font-weight:600}
+.tl p{margin:0;color:var(--muted);font-size:15px}
+.contact{text-align:center;padding-bottom:20px}
+.contact h2{font-size:clamp(32px,6vw,56px)}
+.contact .lead{margin:0 auto}
+.contact .btns{justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:50px 20px calc(40px + env(safe-area-inset-bottom,0px))}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.avatar{order:-1;width:170px;font-size:56px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-
-<!-- ambient background -->
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="bg-glow bg-glow--1" aria-hidden="true"></div>
-<div class="bg-glow bg-glow--2" aria-hidden="true"></div>
-<canvas id="circuit" aria-hidden="true"></canvas>
-
-<!-- progress rail -->
-<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
-
-<header class="nav" id="nav">
-  <a href="#top" class="nav__mark">S.S<span class="dot">.</span></a>
-  <nav class="nav__links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#mini-projects">Mini Projects</a>
-    <a href="#education">Education</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#availability">Availability</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="nav__resume" href="assets/Shravya_Shetty_Resume.pdf" download>
-    <span>Résumé</span>
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#mini-projects">Mini Projects</a>
-  <a href="#education">Education</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#availability">Availability</a>
-  <a href="#contact">Contact</a>
-  <a href="assets/Shravya_Shetty_Resume.pdf" download class="mobile-menu__resume">Download Résumé</a>
-</div>
-
+<script>document.documentElement.classList.add('js')</script>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<header><nav>
+<a class="logo grad" href="#top">S.S.</a>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#education">Education</a><a href="#contact">Contact</a>
+<a class="cv" href="https://shravyajs7.github.io/PORTFOLIO/assets/Shravya_Shetty_Resume.pdf">Résumé</a>
+</nav></header>
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__eyebrow reveal">
-      <span class="pulse-dot"></span>
-      Open to Software Engineer · Java Developer · Full Stack roles
-    </div>
+<section class="hero" style="padding-top:70px">
+<div>
+<span class="pill"><i class="dot"></i>Open to Software Engineer · Java · Full Stack roles</span>
+<h1>Hi, I’m <span class="grad">Shravya</span><br>Shetty.</h1>
+<div class="role">I build <span id="type"></span></div>
+<p class="lead" style="margin-top:16px">B.Tech CSE student (2027) at Presidency University with hands-on experience in full-stack and IoT solutions — and the Cultural Secretary who leads student teams and runs campus events.</p>
+<div class="btns"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="https://shravyajs7.github.io/PORTFOLIO/assets/Shravya_Shetty_Resume.pdf">Download Résumé</a></div>
+</div>
+<div class="avatar" aria-hidden="true">SS</div>
+</section>
 
-    <h1 class="hero__title hero__title--oneline reveal">
-      <span class="hero__title-line hero__title-line--underline">Shetty Shravya Jagdish</span>
-    </h1>
+<div class="stats rv">
+<div class="stat"><b class="grad" data-n="8.44" data-d="2">0</b><span>CGPA / 10</span></div>
+<div class="stat"><b class="grad" data-n="3">0</b><span>Major Projects</span></div>
+<div class="stat"><b class="grad" data-n="3">0</b><span>Certifications</span></div>
+<div class="stat"><b class="grad" data-n="4">0</b><span>Languages Spoken</span></div>
+</div>
 
-    <p class="hero__role reveal">
-      Building with <span class="type-target" id="typeTarget"></span><span class="type-cursor">|</span>
-    </p>
+<section id="about">
+<div class="eyebrow">01 · About</div>
+<h2>Technical problem-solving, <span class="grad">team leadership</span></h2>
+<div class="grid">
+<div class="card rv"><div class="ico">⌨</div><h3>The engineer</h3><p>Skilled in Java, Python, JavaScript, React and Node.js, with a foundation in data structures, OOP, DBMS and computer networks. I like projects that leave the browser tab — robots that patrol at night, cameras that watch wildlife, platforms that guide careers.</p></div>
+<div class="card rv"><div class="ico">🎭</div><h3>The leader</h3><p>As Cultural Secretary, I lead student coordinators and volunteers across dance, music, fashion and theatre — building the communication and coordination skills that carry straight into engineering teams.</p></div>
+</div>
+<div class="facts rv">
+<div><b>Bengaluru, Karnataka</b>Location</div>
+<div><b>B.Tech CSE, 2023–2027</b>Degree</div>
+<div><b>Presidency University</b>Institution</div>
+<div><b>Full Stack · IoT · Java</b>Focus</div>
+</div>
+</section>
 
-    <p class="hero__desc reveal">
-      B.Tech Computer Science &amp; Engineering student (Class of 2027) at Presidency University,
-      crafting full‑stack platforms and IoT‑driven systems — from career‑guidance dashboards
-      to autonomous safety robots. Fluent in turning ideas in Java, Python and JavaScript into
-      software that actually ships.
-    </p>
+<section id="skills">
+<div class="eyebrow">02 · Skills</div>
+<h2>The stack <span class="grad">I build with</span></h2>
+<div class="grid">
+<div class="card rv"><div class="ico">{ }</div><h3>Programming</h3><div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">C</span><span class="chip">JavaScript</span></div></div>
+<div class="card rv"><div class="ico">◱</div><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">React</span><span class="chip">Bootstrap</span></div></div>
+<div class="card rv"><div class="ico">⌁</div><h3>Backend &amp; Databases</h3><div class="chips"><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">MySQL</span><span class="chip">MongoDB</span></div></div>
+<div class="card rv"><div class="ico">⚙</div><h3>Tools</h3><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Android Studio</span><span class="chip">VS Code</span><span class="chip">Eclipse IDE</span></div></div>
+<div class="card rv"><div class="ico">◈</div><h3>Core CS</h3><div class="chips"><span class="chip">DSA</span><span class="chip">OOP</span><span class="chip">DBMS</span><span class="chip">Operating Systems</span><span class="chip">Computer Networks</span></div></div>
+<div class="card rv"><div class="ico">✦</div><h3>Professional</h3><div class="chips"><span class="chip">Leadership</span><span class="chip">Team Coordination</span><span class="chip">Event Management</span><span class="chip">Communication</span><span class="chip">Problem Solving</span><span class="chip">Analytical Thinking</span><span class="chip">Collaboration</span><span class="chip">Adaptability</span><span class="chip">Time Management</span></div></div>
+</div>
+</section>
 
-    <div class="hero__actions reveal">
-      <a href="#projects" class="btn btn--primary">
-        View Projects
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="assets/Shravya_Shetty_Resume.pdf" download class="btn btn--ghost">
-        Download Résumé
-      </a>
-    </div>
+<section id="projects">
+<div class="eyebrow">03 · Projects</div>
+<h2>Things <span class="grad">I’ve built</span></h2>
+<div class="grid">
+<div class="card rv hl"><div class="kicker">Full Stack Platform</div><h3>Career Guidance System</h3>
+<ul><li>Personalized career recommendations for students.</li><li>Role-based dashboards for students, counselors and administrators.</li><li>Authentication, assessments, analytics and profile management.</li><li>Uses relational and NoSQL database technologies.</li></ul>
+<div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">REST APIs</span></div>
+<p><a class="link" href="https://github.com/shravyajs7/career-guidance-">View on GitHub →</a></p></div>
+<div class="card rv hl"><div class="kicker">IoT · Embedded</div><h3>Women Safety Night Patrolling Robot</h3>
+<ul><li>Autonomous robot concept for night-time patrolling and monitoring.</li><li>Integrates GPS, sensors, cameras and emergency communication.</li><li>Obstacle detection and monitoring functionality.</li></ul>
+<div class="chips"><span class="chip">Java</span><span class="chip">Embedded Systems</span><span class="chip">Sensors</span></div>
+<p>Private repository</p></div>
+<div class="card rv hl"><div class="kicker">IoT · Monitoring</div><h3>Camera Trap for Wildlife Monitoring</h3>
+<ul><li>Motion-triggered wildlife monitoring system.</li><li>Automated image and video capture to support observation.</li><li>Focused on a cost-effective solution.</li></ul>
+<div class="chips"><span class="chip">Java</span><span class="chip">Raspberry Pi</span><span class="chip">VS Code</span></div>
+<p>Private repository</p></div>
+</div>
+<h3 style="margin:48px 0 16px;font-size:24px">Mini projects</h3>
+<div class="grid">
+<a class="card rv" href="https://github.com/shravyajs7/SCT_WD_01"><h3>Responsive Web Design</h3><p>Responsive landing page in pure HTML &amp; CSS.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span></div></a>
+<a class="card rv" href="https://github.com/shravyajs7/SCT_WD_2"><h3>Stopwatch</h3><p>Start / stop / lap / reset in vanilla JavaScript.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></a>
+<a class="card rv" href="https://github.com/shravyajs7/SCT_WD_03"><h3>Tic-Tac-Toe vs Computer</h3><p>Browser game with computer opponent and win/draw detection.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></a>
+<a class="card rv" href="https://github.com/shravyajs7/SCT_WD_04"><h3>Stopwatch — v2</h3><p>Follow-up build revisiting timer logic and UI.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></a>
+</div>
+</section>
 
-    <div class="hero__stats reveal">
-      <div class="stat">
-        <span class="stat__num" data-count="8.44">0</span>
-        <span class="stat__label">CGPA / 10</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num" data-count="3">0</span>
-        <span class="stat__label">Shipped Projects</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num" data-count="3">0</span>
-        <span class="stat__label">Certifications</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num" data-count="4">0</span>
-        <span class="stat__label">Languages Spoken</span>
-      </div>
-    </div>
+<section id="leadership">
+<div class="eyebrow">04 · Leadership &amp; Campus Engagement</div>
+<h2>Beyond <span class="grad">the codebase</span></h2>
+<div class="grid">
+<div class="card rv hl"><div class="kicker">Presidency University</div><h3>Cultural Secretary</h3>
+<ul><li>Lead and coordinate cultural activities, student coordinators, committee members and volunteers.</li><li>Oversee planning and execution across Indian and Western dance, music, fashion and theatre.</li><li>Coordinate schedules, rehearsals, participant communication, attendance and on-ground logistics.</li><li>Support inter-college participation through event coordination, team communication and travel or registration planning.</li><li>Coordinate budget requirements, expense documentation and reimbursement follow-ups with stakeholders.</li></ul></div>
+<div class="card rv hl"><div class="kicker">Presidency University</div><h3>Event Head — Invincia &amp; Euphoria</h3>
+<ul><li>Led planning, team coordination, scheduling and execution of technical and cultural events.</li><li>Active participant in Western and Bollywood dance performances.</li></ul></div>
+</div>
+</section>
 
-    <a href="#about" class="scroll-cue" aria-label="Scroll down">
-      <span></span>
-    </a>
-  </section>
+<section id="education">
+<div class="eyebrow">05 · Education &amp; Certifications</div>
+<h2><span class="grad">Foundations</span></h2>
+<div class="tl rv">
+<div><small>2023 – 2027</small><h3>B.Tech, Computer Science &amp; Engineering</h3><p>Presidency University · CGPA 8.44 / 10</p></div>
+<div><small>2023</small><h3>Class XII</h3><p>Alva’s PU College · 92.50%</p></div>
+<div><small>2021</small><h3>Class X</h3><p>Sardar Vallabhbhai Patel Vidyalaya · 78.20%</p></div>
+</div>
+<div class="grid" style="margin-top:34px">
+<div class="card rv"><h3>Certifications</h3><div class="chips"><span class="chip">Cyber Security &amp; Ethical Hacking — Coincent</span><span class="chip">Web Development — InternPe</span><span class="chip">Python for Beginners — Scaler</span></div></div>
+<div class="card rv"><h3>Languages</h3><div class="chips"><span class="chip">English — Professional</span><span class="chip">Kannada — Native</span><span class="chip">Hindi — Professional Working</span><span class="chip">Tulu — Native</span></div></div>
+</div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section__head reveal">
-      <span class="eyebrow">01 · About</span>
-      <h2>Where curiosity meets code</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-copy reveal">
-        <p>
-          I'm a Computer Science undergrad who likes projects that leave the browser tab —
-          robots that patrol at night, cameras that watch for wildlife, platforms that help
-          students pick a career. My comfort zone spans <strong>full‑stack web development</strong>
-          and <strong>embedded / IoT systems</strong>, backed by a solid grip on data structures,
-          databases and operating systems.
-        </p>
-        <p>
-          Outside of code, I run events for thousands of students at Presidency University's
-          fests and perform Western &amp; Bollywood dance — both taught me the same lesson as
-          debugging: rehearse, adapt, and ship on time.
-        </p>
-      </div>
-
-      <div class="about-card glass reveal">
-        <div class="about-card__row">
-          <span>Location</span><strong>Bangalore, Karnataka, IN</strong>
-        </div>
-        <div class="about-card__row">
-          <span>Degree</span><strong>B.Tech CSE, 2023–2027</strong>
-        </div>
-        <div class="about-card__row">
-          <span>Institution</span><strong>Presidency University</strong>
-        </div>
-        <div class="about-card__row">
-          <span>Focus</span><strong>Full Stack · IoT · Java</strong>
-        </div>
-        <div class="about-card__row">
-          <span>Email</span><strong>shravyajs7@gmail.com</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="section__head reveal">
-      <span class="eyebrow">02 · Skills</span>
-      <h2>The stack I build with</h2>
-    </div>
-
-    <div class="skills-grid">
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">{ }</div>
-        <h3>Languages</h3>
-        <div class="tags">
-          <span>Java</span><span>Python</span><span>C</span><span>JavaScript</span><span>SQL</span>
-        </div>
-      </div>
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">◱</div>
-        <h3>Frontend</h3>
-        <div class="tags">
-          <span>HTML5</span><span>CSS3</span><span>React</span><span>Bootstrap</span>
-        </div>
-      </div>
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">⌁</div>
-        <h3>Backend &amp; Data</h3>
-        <div class="tags">
-          <span>Node.js</span><span>REST APIs</span><span>MySQL</span><span>MongoDB</span>
-        </div>
-      </div>
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">⚙</div>
-        <h3>Tools</h3>
-        <div class="tags">
-          <span>Git</span><span>GitHub</span><span>VS Code</span><span>Android Studio</span><span>Eclipse IDE</span>
-        </div>
-      </div>
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">◈</div>
-        <h3>Core Fundamentals</h3>
-        <div class="tags">
-          <span>DSA</span><span>OOP</span><span>DBMS</span><span>Operating Systems</span><span>Computer Networks</span>
-        </div>
-      </div>
-
-      <div class="skill-card glass reveal">
-        <div class="skill-card__icon">✦</div>
-        <h3>Professional</h3>
-        <div class="tags">
-          <span>Problem Solving</span><span>Team Leadership</span><span>Communication</span><span>Adaptability</span><span>Time Management</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section__head reveal">
-      <span class="eyebrow">03 · Projects</span>
-      <h2>Things I've shipped</h2>
-    </div>
-
-    <div class="projects-list">
-
-      <article class="project-card glass reveal">
-        <div class="project-card__meta">
-          <span class="project-card__index">01</span>
-          <span class="project-card__tag">Full Stack Platform</span>
-        </div>
-        <h3>Career Guidance System</h3>
-        <p>
-          A full‑stack platform delivering personalized career recommendations through secure,
-          role‑based dashboards for students, counselors and administrators — covering
-          authentication, assessments, analytics and profile management on a scalable
-          relational + NoSQL architecture.
-        </p>
-        <div class="tags">
-          <span>React</span><span>Node.js</span><span>MongoDB</span><span>REST APIs</span>
-        </div>
-        <div class="project-card__links">
-          <a href="https://github.com/shravyajs7/career-guidance-" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.83 3.13 8.92 7.48 10.37.55.1.75-.24.75-.53 0-.26-.01-1.13-.01-2.05-3.05.55-3.83-.75-4.08-1.44-.14-.35-.72-1.44-1.23-1.73-.42-.23-1.02-.79-.01-.8.94-.02 1.62.87 1.84 1.23 1.08 1.81 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.45-1.33-5.45-5.9 0-1.3.47-2.37 1.23-3.2-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.22a11.3 11.3 0 016 0c2.3-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.23 1.9 1.23 3.2 0 4.58-2.8 5.6-5.47 5.9.43.37.81 1.1.81 2.22 0 1.6-.02 2.9-.02 3.3 0 .29.2.64.76.53 4.35-1.45 7.47-5.54 7.47-10.37C23.02 5.24 18.27.5 12 .5z"/></svg>
-            GitHub
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card glass reveal">
-        <div class="project-card__meta">
-          <span class="project-card__index">02</span>
-          <span class="project-card__tag">IoT · Embedded</span>
-        </div>
-        <h3>Women Safety Night Patrolling Robot</h3>
-        <p>
-          An autonomous robot built for unattended night patrols, integrating GPS, sensors,
-          cameras and emergency communication with real‑time obstacle detection and
-          continuous monitoring.
-        </p>
-        <div class="tags">
-          <span>Java</span><span>Embedded Systems</span><span>Sensors</span>
-        </div>
-        <div class="project-card__links">
-          <span class="project-card__private">Private repository</span>
-        </div>
-      </article>
-
-      <article class="project-card glass reveal">
-        <div class="project-card__meta">
-          <span class="project-card__index">03</span>
-          <span class="project-card__tag">IoT · Computer Vision</span>
-        </div>
-        <h3>Camera Trap for Wildlife Monitoring</h3>
-        <p>
-          A motion‑triggered monitoring system that automates image and video capture in the
-          field — designed as a low‑cost, low‑maintenance alternative to commercial camera traps.
-        </p>
-        <div class="tags">
-          <span>Java</span><span>Raspberry Pi</span><span>VS Code</span>
-        </div>
-        <div class="project-card__links">
-          <span class="project-card__private">Private repository</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- MINI PROJECTS -->
-  <section class="section" id="mini-projects">
-    <div class="section__head reveal">
-      <span class="eyebrow">03.1 · Mini Projects</span>
-      <h2>Practice builds, out in the open</h2>
-    </div>
-
-    <div class="mini-grid">
-
-      <a href="https://github.com/shravyajs7/SCT_WD_01" target="_blank" rel="noopener" class="mini-card glass reveal">
-        <div class="mini-card__top">
-          <span class="mini-card__icon">◱</span>
-          <svg class="mini-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Responsive Web Design</h3>
-        <p>A fully responsive landing page built with pure HTML &amp; CSS, adapting cleanly across breakpoints.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span></div>
-      </a>
-
-      <a href="https://github.com/shravyajs7/SCT_WD_2" target="_blank" rel="noopener" class="mini-card glass reveal">
-        <div class="mini-card__top">
-          <span class="mini-card__icon">⏱</span>
-          <svg class="mini-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Stopwatch</h3>
-        <p>A start / stop / lap / reset stopwatch built with vanilla JavaScript and DOM timers.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      </a>
-
-      <a href="https://github.com/shravyajs7/SCT_WD_03" target="_blank" rel="noopener" class="mini-card glass reveal">
-        <div class="mini-card__top">
-          <span class="mini-card__icon">✕⭘</span>
-          <svg class="mini-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Tic-Tac-Toe vs Computer</h3>
-        <p>Browser-based Tic-Tac-Toe with a computer opponent and win/draw detection logic.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      </a>
-
-      <a href="https://github.com/shravyajs7/SCT_WD_04" target="_blank" rel="noopener" class="mini-card glass reveal">
-        <div class="mini-card__top">
-          <span class="mini-card__icon">⏱</span>
-          <svg class="mini-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Stopwatch — v2</h3>
-        <p>A follow-up stopwatch build, revisiting timer logic and UI polish.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- EDUCATION + CERTS -->
-  <section class="section" id="education">
-    <div class="section__head reveal">
-      <span class="eyebrow">04 · Education &amp; Certifications</span>
-      <h2>Foundations</h2>
-    </div>
-
-    <div class="edu-grid">
-      <div class="timeline reveal">
-        <div class="timeline__item">
-          <div class="timeline__year">2023 – 2027</div>
-          <div class="timeline__body">
-            <h4>B.Tech, Computer Science &amp; Engineering</h4>
-            <p>Presidency University · CGPA 8.44 / 10</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2023</div>
-          <div class="timeline__body">
-            <h4>Class XII</h4>
-            <p>Alva's PU College · 92.50%</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2021</div>
-          <div class="timeline__body">
-            <h4>Class X</h4>
-            <p>Sardar Vallabhbhai Patel Vidyalaya · 78.20%</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="certs glass reveal">
-        <h3>Certifications</h3>
-        <ul>
-          <li><span>Cyber Security &amp; Ethical Hacking</span><em>Coincent</em></li>
-          <li><span>Web Development</span><em>InternPe</em></li>
-          <li><span>Python for Beginners</span><em>Scaler</em></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section class="section" id="leadership">
-    <div class="section__head reveal">
-      <span class="eyebrow">05 · Leadership</span>
-      <h2>Beyond the codebase</h2>
-    </div>
-
-    <div class="leadership-grid">
-      <div class="leadership-card glass reveal">
-        <h3>Event Head — Invincia &amp; Euphoria</h3>
-        <p>Presidency University</p>
-        <p class="muted">
-          Led planning, team coordination, scheduling and execution of technical and cultural
-          fests end‑to‑end — from concept to closing ceremony.
-        </p>
-      </div>
-      <div class="leadership-card glass reveal">
-        <h3>Performer</h3>
-        <p>Western &amp; Bollywood Dance</p>
-        <p class="muted">
-          Active participant in campus dance performances — same discipline of rehearsal and
-          teamwork that goes into every project.
-        </p>
-      </div>
-    </div>
-
-    <div class="languages reveal">
-      <span>English <em>Professional</em></span>
-      <span>Kannada <em>Native</em></span>
-      <span>Hindi <em>Professional</em></span>
-      <span>Tulu <em>Native</em></span>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <!-- AVAILABILITY -->
-  <section class="section" id="availability">
-    <div class="section__head reveal">
-      <span class="eyebrow">06 · Availability</span>
-      <h2>Ready to relocate, ready to build</h2>
-    </div>
-
-    <div class="availability-wrap reveal">
-      <p class="availability-note">
-        Based in Bangalore, and open to opportunities — in‑office, hybrid, or remote — across:
-      </p>
-      <div class="city-grid">
-        <div class="city-chip glass">
-          <span class="city-chip__dot"></span>
-          <span>Bangalore</span>
-        </div>
-        <div class="city-chip glass">
-          <span class="city-chip__dot"></span>
-          <span>Mumbai</span>
-        </div>
-        <div class="city-chip glass">
-          <span class="city-chip__dot"></span>
-          <span>Chennai</span>
-        </div>
-        <div class="city-chip glass">
-          <span class="city-chip__dot"></span>
-          <span>Hyderabad</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section--contact" id="contact">
-    <div class="contact-card glass reveal">
-      <span class="eyebrow">07 · Contact</span>
-      <h2>Let's build something.</h2>
-      <p>Open to Software Engineer, Java Developer and Full Stack Developer roles — reach out.</p>
-
-      <div class="contact-links">
-        <a href="mailto:shravyajs7@gmail.com" class="btn btn--primary">
-          shravyajs7@gmail.com
-        </a>
-        <a href="https://linkedin.com/in/shetty-shravya-jagdish-1823a230a" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
-        <a href="https://github.com/shravyajs7" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
-        <a href="tel:+918073707761" class="btn btn--ghost">+91 80737 07761</a>
-      </div>
-    </div>
-  </section>
-
+<section id="contact" class="contact">
+<div class="eyebrow">06 · Contact</div>
+<h2>Let’s build <span class="grad">something.</span></h2>
+<p class="lead">Open to Software Engineer, Java Developer and Full Stack Developer roles — reach out.</p>
+<div class="btns"><a class="btn p" href="mailto:shravyajs7@gmail.com">shravyajs7@gmail.com</a><a class="btn" href="https://linkedin.com/in/shetty-shravya-jagdish-1823a230a">LinkedIn</a><a class="btn" href="https://github.com/shravyajs7">GitHub</a><a class="btn" href="tel:+918073707761">+91 80737 07761</a></div>
+</section>
 </main>
-
-<footer class="footer">
-  <p>Designed &amp; built by Shetty Shravya Jagdish · <span id="year"></span></p>
-</footer>
-
-<script src="script.js"></script>
+<footer>Designed &amp; built by Shetty Shravya Jagdish</footer>
+<script>
+(function(){
+var words=["full-stack platforms","IoT systems","Java applications","team-led events"],i=0,j=0,del=false,el=document.getElementById('type');
+function tick(){var w=words[i];el.textContent=w.slice(0,j);
+if(!del&&j===w.length){del=true;return setTimeout(tick,1400)}
+if(del&&j===0){del=false;i=(i+1)%words.length}
+j+=del?-1:1;setTimeout(tick,del?35:70)}
+tick();
+function count(e){var n=parseFloat(e.dataset.n),d=+e.dataset.d||0,t=0;
+var s=setInterval(function(){t+=.04;if(t>=1){t=1;clearInterval(s)}e.textContent=(n*t).toFixed(d)},30)}
+if('IntersectionObserver' in window){
+var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');
+x.target.querySelectorAll('[data-n]').forEach(count);o.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){o.observe(e)})
+}else{document.querySelectorAll('[data-n]').forEach(function(e){e.textContent=e.dataset.n});document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
+})();
+</script>
 </body>
 </html>
